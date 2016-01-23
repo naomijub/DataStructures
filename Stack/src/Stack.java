@@ -26,9 +26,14 @@ public class Stack {
 			return retAux;
 		}else{
 			retAux = top;
+			retAux.setPrev(null);
 			top = aux.getPrev();
 			return retAux;
 		}
+	}
+	
+	public void lookTop(){
+		System.out.println("ID: "+top.getObj().getID()+" Name: "+top.getObj().getName());
 	}
 	
 	public void printNod(Nod aux){

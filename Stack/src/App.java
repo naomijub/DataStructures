@@ -10,6 +10,8 @@ public class App {
 		stack.push("Jaime Clayton");
 		stack.push("Laverne Cox");
 		
+		stack.lookTop();
+		
 		stack.printNod(stack.pull());
 		System.out.println();
 		
