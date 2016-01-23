@@ -1,0 +1,16 @@
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Obj obj1 = new Obj("Julia");
+		Obj obj2 = new Obj("Naomi");
+		Obj obj3 = new Obj("Rosenfield");
+
+		obj1.print();
+		obj2.print();
+		obj3.print();
+	}
+
+}

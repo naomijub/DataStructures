@@ -1,0 +1,70 @@
+
+public class List {
+
+	private Nod first;
+	
+	//constructor
+	public List(){
+		this.first = null;
+	}
+
+	//get set
+	public Nod getFirst() {
+		return first;
+	}
+
+	public void setFirst(Nod first) {
+		this.first = first;
+	}
+	
+	//add
+	public void add(String name){
+		Nod nodAux = new Nod(name);
+		if(first == null){
+			first = nodAux;
+		}else{
+			Nod aux = first;
+			while(aux.hasNext()){
+				aux = aux.getNext();
+			}
+			aux.setNext(nodAux);
+		}
+	}
+	
+	public void add(Obj obj){
+		Nod nodAux = new Nod(obj);
+		if(first == null){
+			first = nodAux;
+		}else{
+			Nod aux = first;
+			while(aux.hasNext()){
+				aux = aux.getNext();
+			}
+			aux.setNext(nodAux);
+		}
+	}
+	
+	public Nod findName(String name){
+		if(first == null){
+			return null;
+		}else{
+			Nod aux = first;
+			while(aux.hasNext()){
+				if(aux.getObj().getName().equalsIgnoreCase(name)){
+					return aux;
+				}else{
+					aux = aux.getNext();
+				}	
+			}
+			return null;		
+		}
+	}
+	
+	public void printList(){
+		Nod aux = first;
+		do{
+			System.out.println("ID: "+ aux.getObj().getID() + " Name: "+ aux.getObj().getName());
+			aux = aux.getNext();
+		}while(aux.hasNext())
+	}
+}

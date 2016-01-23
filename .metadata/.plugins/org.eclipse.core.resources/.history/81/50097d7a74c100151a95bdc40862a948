@@ -1,0 +1,21 @@
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List list = new List();
+		
+		list.add("Julia");
+		list.add("Naomi");
+		list.add("Rosenfield");
+		Obj obj = new Obj("Boeira");
+		list.add(obj);
+		
+		Nod aux = list.findName("Boeira");
+		aux.getObj().print();
+		
+		list.printList();
+		
+	}
+
+}
